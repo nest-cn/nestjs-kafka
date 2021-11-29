@@ -1,6 +1,6 @@
 {
   "name": "nestjs-kafka",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "Marvin <yongfeide123@sina.com>",
   "homepage": "",
@@ -9,6 +9,13 @@
   "directories": {
     "lib": "lib",
     "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nest-cn/nestjs-kafka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nest-cn/nestjs-kafka/issues"
   },
   "module": "./src/index.ts",
   "scripts": {},
