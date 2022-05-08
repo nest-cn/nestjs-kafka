@@ -1,11 +1,12 @@
 {
   "name": "nestjs-kafka",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "> TODO: description",
   "author": "Marvin <yongfeide123@sina.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "./src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,7 +19,9 @@
     "url": "https://github.com/nest-cn/nestjs-kafka/issues"
   },
   "module": "./src/index.ts",
-  "scripts": {},
+  "scripts": {
+    "build:tsc": "cross-env NODE_ENV=production tsc -p tsconfig.json"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -28,18 +31,23 @@
   },
   "files": [
     "src",
+    "dist",
     "LICENSE",
     "readme.md"
   ],
   "peerDependencies": {
-    "@nestjs/common": "^7.4.2",
-    "kafkajs": "^1.15.0"
+    "kafkajs": "latest"
   },
   "devDependencies": {
-    "@types/node": "^16.11.10"
+    "@types/node": "^16.11.10",
+    "cross-env": "^7.0.3",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "typescript": "4.5.4"
   },
   "dependencies": {
     "@nestjs/common": "^8.2.3",
-    "kafkajs": "^1.15.0"
+    "kafkajs": "latest",
+    "rxjs": "^7.5.5"
   }
 }
