@@ -5,7 +5,7 @@ import { KafkaConfig } from './KafkaMessage';
 @Global()
 @Module({})
 export class KafkaModule {
-  static register(kafkaConfig: KafkaConfig): DynamicModule {
+  static register(kafkaConfig: KafkaConfig): DynamicModule | any {
     return {
       global: true,
       module: KafkaModule,
@@ -16,6 +16,6 @@ export class KafkaModule {
         },
       ],
       exports: [KafkaService],
-    };
+    } as DynamicModule;
   }
 }
